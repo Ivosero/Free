@@ -21,7 +21,7 @@ a { color: inherit; text-decoration: none; }
   background: #173b42;
 }
 
-.hero__image {
+.hero__media {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -166,7 +166,7 @@ h1 {
 
 @media (max-width: 720px) {
   .hero { min-height: 500px; }
-  .hero__image { object-position: 57% center; }
+  .hero__media { object-position: 57% center; }
   .topbar { padding: 22px 20px; }
   .brand__mark { width: 40px; font-size: 26px; }
   .brand__name { font-size: 11px; }
@@ -188,3 +188,12 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) { .booking { transition: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__media { display: none; }
+  .hero {
+    background-image: url("/hero-fallback.png");
+    background-size: cover;
+    background-position: center;
+  }
+}

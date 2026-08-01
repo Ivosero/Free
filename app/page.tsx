@@ -11,11 +11,18 @@ function BellIcon() {
 export default function Home() {
   return (
     <main className="hero">
-      <img
-        className="hero__image"
-        src="/referencia-cliente.png"
-        alt="Vista aérea de un hotel junto al mar, imagen de referencia provista por el cliente"
-      />
+      <video
+        className="hero__media"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/hero-fallback.png"
+        aria-hidden="true"
+      >
+        <source src="/hero-resort.mp4" type="video/mp4" />
+      </video>
       <div className="hero__shade" aria-hidden="true" />
 
       <header className="topbar">
@@ -59,7 +66,7 @@ export default function Home() {
         </a>
       </section>
 
-      <p className="demo-note">Prototipo · texto, logo, teléfono y enlace reemplazables</p>
+      <p className="demo-note">Prototipo · texto, logo, teléfono, video y enlace reemplazables</p>
     </main>
   );
 }
