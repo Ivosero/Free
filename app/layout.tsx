@@ -15,13 +15,13 @@ const sans = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Camelia Hotel | Confort sin igual",
-  description: "Una experiencia de lujo frente al mar.",
+  title: "Camelia Hotel | Unparalleled comfort",
+  description: "The ultimate luxury experience by the sea.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body className={`${display.variable} ${sans.variable}`}>{children}</body>
     </html>
   );
